@@ -27,6 +27,7 @@ public class SpiralMatrix {
     3 : Left (Bottom -> Top)
     */
     public List<Integer> sprialOrder(int[][] matrix) {
+
         if (matrix == null || matrix.length == 0) return new ArrayList<>();
 
         int Top = 0, Left = 0;
