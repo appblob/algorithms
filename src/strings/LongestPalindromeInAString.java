@@ -2,10 +2,11 @@ package strings;
 
 public class LongestPalindromeInAString {
     /*
+    Leetcode : 5
+
     THOUGHT : Use 3 pointers. current, left and right.
 
-    while c < len
-    We try to find a palindrome at every current index by doing the following :
+    while (c < len), We try to find a palindrome at every current index by doing the following :
     set l and r to c (say 1 in "abbba")
     move r forward until s[r] == s[r + 1]
     compare char[l - 1] with char[r + 1] and move l and r away by one step each
@@ -14,7 +15,7 @@ public class LongestPalindromeInAString {
 
     public static void main(String[] args) {
         LongestPalindromeInAString lpias = new LongestPalindromeInAString();
-        System.out.println(lpias.longestPalindrome("seabbbab"));
+        System.out.println(lpias.longestPalindrome1("seabbbab"));
     }
 
     public String longestPalindrome(String s) {
@@ -53,5 +54,37 @@ public class LongestPalindromeInAString {
         }
 
         return s.substring(pStart, pStart + maxPLen);
+    }
+
+    public String longestPalindrome1(String s) {
+        if (s == null || s.length() <= 1) return s;
+        int len = s.length();
+
+        int left, right, current = 0;
+
+        int start = 0, maxLen = 0;
+
+        while (current < len - (maxLen / 2)) {
+
+            left = right = current;
+
+            while (right + 1 < len && s.charAt(right) == s.charAt(right + 1)) right++;
+
+            current = right + 1;
+
+            while (left > 0 && right + 1 < len && s.charAt(left - 1) == s.charAt(right + 1)) {
+                left--;
+                right++;
+            }
+
+            int slen = right - left + 1;
+
+            if (slen > maxLen) {
+                maxLen = slen;
+                start = left;
+            }
+        }
+
+        return s.substring(start, start + maxLen);
     }
 }
