@@ -40,12 +40,13 @@ public class AddTwoNumbers {
 
             int sum = carry;
 
-            // add the non-null node's val
+            // add the non-null node's val and move to it's next node
             if (l1 != null) {
 
                 sum += l1.val;
                 l1 = l1.next;
             }
+
             if (l2 != null) {
 
                 sum += l2.val;
@@ -58,9 +59,9 @@ public class AddTwoNumbers {
             iter = iter.next;
         }
 
-        if (carry == 1) {
+        // handle any carry from MSD
+        if (carry == 1)
             iter.next = new Node(carry);
-        }
 
         return dummy.next;
     }
