@@ -30,7 +30,7 @@ public class Fibonnaci {
     // Bottom Up approach with Memoization
     public long fibBUMemo(int n) {
 
-        // create an array to hold 0 to n
+        // createLL an array to hold 0 to n
         long[] memoization = new long[n + 1];
 
         memoization[0] = 0;
@@ -48,7 +48,7 @@ public class Fibonnaci {
     // Top Down approach with Memoization
     public long fibTDMemo(int n) {
 
-        // create an array to hold 0 to n
+        // createLL an array to hold 0 to n
         long[] memoization = new long[n + 1];
 
         return fibTDHelper(n, memoization);
