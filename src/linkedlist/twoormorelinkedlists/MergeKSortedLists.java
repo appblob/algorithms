@@ -7,8 +7,8 @@ public class MergeKSortedLists {
      * Leetcode : 23
      *
      * Thought : We should be left with one merged list at the end.
-     * Use 2 pointer: end pointing to the last list
-     * until end > 0(ie there is more than one list left to merge)
+     * Use 2 pointer: end pointing to the index of last list in the array
+     * until end > 0 (i.e. there is more than one list left to merge)
      * reset begin to 0
      * until begin and end cross over merge the contents of lls[end] into lls[begin] and move both closer
      * */
