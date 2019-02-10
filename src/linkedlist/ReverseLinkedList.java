@@ -1,19 +1,6 @@
 package linkedlist;
 
 public class ReverseLinkedList {
-    public static void main(String[] args) {
-        int[] nums = {1, 2, 3, 4, 5};
-        Node node = Node.insert(nums);
-        ReverseLinkedList rll = new ReverseLinkedList();
-        node = rll.reverse(node);
-        Node.print(node);
-
-        node = Node.insert(nums);
-        Node.print(node);
-        node = rll.reverseRecursive(node);
-        Node.print(node);
-    }
-
     /*
      * Leetcode : 206
      *
@@ -68,6 +55,19 @@ public class ReverseLinkedList {
         node.next = null;
 
         return ret;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3, 4, 5};
+        Node node = Node.insert(nums);
+        ReverseLinkedList rll = new ReverseLinkedList();
+        node = rll.reverse(node);
+        Node.print(node);
+
+        node = Node.insert(nums);
+        Node.print(node);
+        node = rll.reverseRecursive(node);
+        Node.print(node);
     }
 
 }
