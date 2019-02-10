@@ -8,8 +8,8 @@ public class DetectCycle {
      *
      * Thought : Use 2 pointers(runners) : Fast and Slow
      * Consider you are running in a circular race track
-     * fast runners covers 2 feet on each step and slow covers one feet.
-     * The fast runner and slow runner will meet each other multiple times even thought running paces are different.
+     * fast runner covers 2 feet on each step and slow runner covers one feet.
+     * The fast runner and slow runner will meet each other multiple times even thought their running paces are different.
      *
      * Another example : Analog clock.
      * */
