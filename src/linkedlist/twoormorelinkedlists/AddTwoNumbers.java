@@ -19,6 +19,8 @@ public class AddTwoNumbers {
      * check carry after all iteration, if there is a carry from last sum
      * add the carry to the result.
      *
+     * Use Dummy node
+     *
      * */
     public Node add(Node l1, Node l2) {
         Node dummy = new Node(0);
