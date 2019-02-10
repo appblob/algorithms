@@ -4,10 +4,12 @@ public class ReverseLinkedList {
     /*
      * Leetcode : 206
      *
-     * Thought : Have 3 pointers: previous = null, current = node, next
+     * Technique : 3 pointers (previous, current, future)
+     *
+     * Thought : Have 3 pointers: previous = null, current = node, future
      * Iterate through the ll using current.
-     * copy the next and change current.next to prev.
-     * set prev to current and current to next to iterate forward
+     * Copy the current.next into future so that we don't loose the later part of ll and then change current.next to prev.
+     * Set prev to current and current to future to iterate forward
      * */
     public Node reverse(Node node) {
 
@@ -16,11 +18,11 @@ public class ReverseLinkedList {
 
         while (current != null) {
 
-            Node next = current.next;
+            Node future = current.next;
             current.next = prev;
 
             prev = current;
-            current = next;
+            current = future;
         }
 
         return prev;
