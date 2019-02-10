@@ -26,8 +26,11 @@ public class Node {
         return dummy.next;
     }
 
-    public static void print(Node node) {
+    public static void print(String msg, Node node) {
         StringBuilder sb = new StringBuilder();
+        sb.append(msg);
+        if(msg.lastIndexOf(" ") != msg.length() - 1)
+            sb.append(" ");
 
         while (node != null) {
             sb.append(node.val);
@@ -36,6 +39,17 @@ public class Node {
         }
 
         System.out.println(sb.toString());
+    }
+
+    public static Node getNode(Node ll, int value) {
+
+        while(ll != null) {
+
+            if(ll.val == value) return ll;
+
+            ll = ll.next;
+        }
+        return null;
     }
 
     // assumption this is a well behaving function with valid inputs
@@ -76,4 +90,5 @@ public class Node {
 
         System.out.println(sb.toString());
     }
+
 }

@@ -1,4 +1,6 @@
-package linkedlist;
+package linkedlist.twoormorelinkedlists;
+
+import linkedlist.Node;
 
 public class AddTwoNumbers {
     /*
@@ -61,7 +63,7 @@ public class AddTwoNumbers {
         Node l2 = Node.createLL(nums2);
 
         Node l3 = atn.add(l1, l2);
-        Node.print(l3);
+        Node.print("Result from adding 2 numbers",l3);
 
     }
 

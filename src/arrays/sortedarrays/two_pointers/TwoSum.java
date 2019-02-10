@@ -1,4 +1,4 @@
-package arrays.sorted.two_pointers;
+package arrays.sortedarrays.two_pointers;
 
 import java.util.Arrays;
 import java.util.HashMap;

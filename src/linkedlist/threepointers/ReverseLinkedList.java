@@ -63,15 +63,15 @@ public class ReverseLinkedList {
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 5};
-        Node node = Node.createLL(nums);
+        Node ll = Node.createLL(nums);
         ReverseLinkedList rll = new ReverseLinkedList();
-        node = rll.reverse(node);
-        Node.print(node);
+        ll = rll.reverse(ll);
+        Node.print("Reversed Linked list :",ll);
 
-        node = Node.createLL(nums);
-        Node.print(node);
-        node = rll.reverseRecursive(node);
-        Node.print(node);
+        ll = Node.createLL(nums);
+        Node.print("Original Linked list :",ll);
+        ll = rll.reverseRecursive(ll);
+        Node.print("Reversed Linked list :",ll);
     }
 
 }

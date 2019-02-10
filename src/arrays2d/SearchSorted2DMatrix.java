@@ -5,7 +5,7 @@ public class SearchSorted2DMatrix {
      * Leetcode : 74
      *
      * Search a value in an m x n matrix.
-     * Integers in each row are sorted from left to right.
+     * Integers in each row are sortedarrays from left to right.
      * First integer of each row is greater than the last integer of the previous row.
      *
      * THOUGHT : Start from topRight = m[0][m[0].len - 1]
