@@ -1,4 +1,6 @@
-package linkedlist;
+package linkedlist.threepointers;
+
+import linkedlist.Node;
 
 public class ReverseLinkedList {
     /*

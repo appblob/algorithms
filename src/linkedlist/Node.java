@@ -1,6 +1,6 @@
 package linkedlist;
 
-class Node {
+public class Node {
     // making public to reduce getters and setters in algorithm code
     public int val;
     public Node next;
@@ -9,6 +9,7 @@ class Node {
         val = value;
     }
 
+    // helpers //
     public static Node insert(int[] nums) {
         Node dummy = new Node(0);
         Node iter = dummy;
