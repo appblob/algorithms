@@ -1,4 +1,4 @@
-package dictionary;
+package strings.counting;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -83,7 +83,7 @@ public class RobotReturnToOrigin {
 
         RobotReturnToOrigin rrto = new RobotReturnToOrigin();
 
-        String[] moves = {"LRUD", "LL", "", null};
+        String[] moves = {"LRUD", "LL"};
 
         for (int i = 0; i < moves.length; i++) {
 

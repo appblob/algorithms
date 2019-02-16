@@ -1,4 +1,4 @@
-package strings;
+package maps;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -83,7 +83,7 @@ public class RobotReturnToOrigin {
 
         RobotReturnToOrigin rrto = new RobotReturnToOrigin();
 
-        String[] moves = {"LRUD", "LL"};
+        String[] moves = {"LRUD", "LL", "", null};
 
         for (int i = 0; i < moves.length; i++) {
 
