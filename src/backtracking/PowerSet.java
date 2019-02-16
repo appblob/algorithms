@@ -16,12 +16,19 @@ public class PowerSet {
         return result;
     }
 
+    /*
+    * This is a classic backtracking problem.
+    * For every current i, loop from i + 1 to len and so on
+    *
+    * See the output statements for a better idea.
+    * */
     private void backtrack(int[] nums, int idx, List<Integer> current, List<List<Integer>> result) {
 
+        // Capture every possible state from empty array
         result.add(new ArrayList<>(current));
 
-        int len = nums.length;
-        for (int i = idx; i < len; i++) {
+
+        for (int i = idx; i < nums.length; i++) {
 
             current.add(nums[i]);
 
