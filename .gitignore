@@ -11,7 +11,7 @@
 
 # Log file
 *.log
-
+out/*
 .*.md.html
 .DS_Store
 .classpath
