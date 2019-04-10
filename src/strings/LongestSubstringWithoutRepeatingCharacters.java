@@ -10,7 +10,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
     distance between last unique characters = i - index at which last time s[i] was found.
 
     */
-    public int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) {
         int n = s.length(), ans = 0;
 
         // current index of character
@@ -33,4 +33,13 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
         return ans;
     }
+
+    public static void main(String[] args) {
+        String str = "abcabcbb";
+        System.out.println("Length of longest substring without repeating characters in \"" + str + "\" is : " + lengthOfLongestSubstring(str));
+
+        str = " ";
+        System.out.println("Length of longest substring without repeating characters in \"" + str + "\" is : " + lengthOfLongestSubstring(str));
+    }
+
 }

@@ -35,7 +35,7 @@ public class LongestPalindromeInAString {
             //skip forward when character repeats
             while (right < len - 1 && chs[right] == chs[right + 1]) right++;
 
-            //store the next position
+            //store the next start position
             current = right + 1;
 
             //the palindrome will be between left and right
@@ -44,7 +44,7 @@ public class LongestPalindromeInAString {
                 right++;
             }
 
-            // compute the lenght of new found palindrome
+            // compute the length of newly found palindrome
             int pLen = right - left + 1;
 
             if (pLen > maxPLen) {
