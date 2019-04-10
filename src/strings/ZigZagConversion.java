@@ -7,7 +7,8 @@ public class ZigZagConversion {
    THOUGHT :
    Create  arrays of StringBuffer(s) : sb[numRows]
    For numRows = 3, the sequence of inserting into sb array is 0,1,2,1,0,1,2,1,0,1,2.
-   Once we hit index numRows - 1 we decrement index by 1. Upon hitting 0 we increment by 1
+   If you notice once the index reaches numRows - 1 it decrements by 1 until it reaches 0.
+   Once index is 0 it starts incrementing by 1 until it reaches numRows - 1.
 
    Iterate through the input string
    sb[i] = string[itr]

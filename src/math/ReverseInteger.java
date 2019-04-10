@@ -2,6 +2,11 @@ package math;
 
 public class ReverseInteger {
 
+    /*
+    * Leetcode : 7
+    *
+    * */
+
     public static int reverse(int x) {
 
         // if it's one digit number nothing to reverse
