@@ -22,50 +22,55 @@ public class AddTwoNumbers {
      * Use Dummy node
      *
      * */
-    public Node add(Node l1, Node l2) {
+
+    /*
+    Thought : iterate while (l1 != null || l2 != null || carry == 1)
+    Compute sum = carry + (l1 != null) ? l1.val : 0 + (l2 != null) ? l2.val : 0
+    */
+
+    public Node addTwoNumbers(Node l1, Node l2) {
+
         Node dummy = new Node(0);
         Node iter = dummy;
 
         int carry = 0;
-        while (l1 != null || l2 != null) {
+
+        // while one of the list is not null or carry is 1
+        while(l1 != null || l2 != null || carry == 1) {
 
             int sum = carry;
 
-            // add the non-null node's val and move to it's next node
-            if (l1 != null) {
-
+            if(l1 != null) {
                 sum += l1.val;
                 l1 = l1.next;
             }
 
-            if (l2 != null) {
-
+            if(l2 != null) {
                 sum += l2.val;
                 l2 = l2.next;
             }
 
-            carry = sum / 10;
-
             iter.next = new Node(sum % 10);
             iter = iter.next;
-        }
 
-        // handle any carry from MSD
-        if (carry == 1)
-            iter.next = new Node(carry);
+            carry = sum / 10;
+        }
 
         return dummy.next;
     }
 
     public static void main(String[] args) {
+
         AddTwoNumbers atn = new AddTwoNumbers();
+
         int[] nums1 = {7, 8, 9};
         int[] nums2 = {5, 4, 3};
         Node l1 = Node.createLL(nums1);
         Node l2 = Node.createLL(nums2);
 
-        Node l3 = atn.add(l1, l2);
-        Node.print("Result from adding 2 numbers",l3);
+        Node l3 = atn.addTwoNumbers(l1, l2);
+
+        Node.print("Result from adding 2 numbers : ", l3);
 
     }
 
