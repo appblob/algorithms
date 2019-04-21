@@ -72,13 +72,14 @@ public class TreeHelper {
             for (int i = 0; i < size; i++) {
 
                 TreeNode current = q.poll();
-                levelResult.add(current.val );
+                if(current == null) {
+                    levelResult.add(null);
+                } else {
+                    levelResult.add(current.val);
 
-                if(current.left != null)
-                q.offer(current.left);
-
-                if(current.right != null)
-                q.offer(current.right);
+                    q.offer(current.left);
+                    q.offer(current.right);
+                }
 
             }
 
@@ -86,5 +87,27 @@ public class TreeHelper {
         }
 
         System.out.println(msg + ":\n" + result.toString());
+    }
+
+    public static TreeNode findNode(TreeNode root, int value) {
+
+        TreeNode result = null;
+        if(root == null)
+            System.out.println("Empty tree.");
+
+        Queue<TreeNode> q = new LinkedList<>();
+        q.offer(root);
+
+        while(!q.isEmpty()) {
+
+            TreeNode current = q.poll();
+
+            if(current.val == value) return current;
+
+            if(current.left != null) q.offer(current.left);
+            if(current.right != null) q.offer(current.right);
+        }
+
+        return result;
     }
 }
