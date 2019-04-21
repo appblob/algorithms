@@ -17,9 +17,12 @@ public class LevelOrderBottomUp {
 
         while(!q.isEmpty()) {
 
+            // find the number of nodes at current level,
+            // finding here will help us distinguish them from their children after adding them
             int levelSize = q.size();
             List<Integer> levelItems = new LinkedList<>();
 
+            // get each node at current level, if the node has left and/or right child add it to the queue.
             for (int i = 0; i < levelSize; i++) {
 
                 TreeNode current = q.poll();
@@ -30,6 +33,7 @@ public class LevelOrderBottomUp {
 
             }
 
+            // add the array with items at current level at the beginning, we want reverse
             result.add(0, levelItems);
         }
 
