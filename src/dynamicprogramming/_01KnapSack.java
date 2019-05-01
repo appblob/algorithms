@@ -7,9 +7,9 @@ public class _01KnapSack {
         int[][] maxValues = new int[values.length + 1][totalWt + 1];
 
         // when wt is 0 or i is 0, maxValues[i] wt is 0
-        for (int i = 1; i < values.length + 1; i++) {
+        for (int i = 1; i < (values.length + 1); i++) {
 
-            for (int wt = 1; wt < totalWt + 1; wt++) {
+            for (int wt = 1; wt < (totalWt + 1); wt++) {
 
                 if (wt - weights[i - 1] >= 0) {
 
@@ -27,6 +27,8 @@ public class _01KnapSack {
 
         return maxValues[values.length][totalWt];
     }
+
+
 
     public static void main(String[] args) {
         int[] weights = {1, 3, 4, 5};//{2,3,7,9,12};
