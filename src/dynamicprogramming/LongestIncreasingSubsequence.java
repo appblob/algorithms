@@ -5,7 +5,11 @@ import java.util.List;
 
 public class LongestIncreasingSubsequence {
 
+    /*
+    * O(n^2)
+    * */
     public static int lis(int[] arr) {
+
         int [] increasingCounter = new int[arr.length];
         int [] numOrdering = new int[arr.length];
 
@@ -70,5 +74,9 @@ public class LongestIncreasingSubsequence {
         int[] arr = {23, 10, 22, 5, 33, 8, 9, 21, 50, 41, 60, 80, 99, 22, 23, 24, 25, 26, 27};
 
         System.out.println("Length of longest increasing sub-sequence is : " + lis(arr));
+
+        int[] arr2 = { 5, 4, 3, 2, 1};
+        System.out.println("Length of longest contiguous increasing sub-sequence is : " + lis(arr2));
+
     }
 }
