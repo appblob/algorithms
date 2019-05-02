@@ -6,6 +6,14 @@ import java.util.Random;
 
 public class LowestCommonAncestor {
 
+    /*
+    * Postorder traversal :
+    * We have to return a node that has p and q in either left subtree or right subtree or one in left and other in right.
+    * */
+
+    /*
+    * If one node is present and the other one is absent then this will return the one present in the tree.
+    * */
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
         // if node is either p or q then we have found one of the nodes
@@ -37,6 +45,10 @@ public class LowestCommonAncestor {
         return lca(root, p, q).ancestor;
     }
 
+    /*
+    * LCA.nodesFound is used as a flag. Increment it by 1 when either p or q is found.
+    * When LCA.nodesFound == 2 at that node both p and q are found.
+    * */
     private static LCA lca(TreeNode root, TreeNode node1, TreeNode node2){
 
         if(root == null) return new LCA(0, null);
@@ -59,6 +71,7 @@ public class LowestCommonAncestor {
     }
 
     public static void main(String[] args) {
+
         int [] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         TreeNode root = TreeHelper.sortedArrayToBST(arr);
