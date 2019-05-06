@@ -57,7 +57,7 @@ public class MergeMultipleSortedArraysWithDuplicates {
         int writeIndex = p;
         while(p < ar.length) {
 
-            // skip duplicates
+            // skip duplicates.
             while(p + 1 < ar.length && ar[p] == ar[p + 1]) p++;
 
             result.add(ar[writeIndex]);
