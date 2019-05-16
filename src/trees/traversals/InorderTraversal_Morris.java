@@ -38,23 +38,23 @@ public class InorderTraversal_Morris {
 
                 // if there is a left child find the right most child until there are no more right children or
                 // right child is already attached to current
-                TreeNode previous = current.left;
-                while(previous.right != null && previous.right != current) {
+                TreeNode newParentOfCurrent = current.left;
+                while(newParentOfCurrent.right != null && newParentOfCurrent.right != current) {
 
-                    previous = previous.right;
+                    newParentOfCurrent = newParentOfCurrent.right;
                 }
 
                 // if it is not attached to current attach and explore the left
-                if(previous.right == null) {
+                if(newParentOfCurrent.right == null) {
 
-                    previous.right = current;
+                    newParentOfCurrent.right = current;
 
                     current = current.left;
 
                 } else {
 
                     // detach the connection, visit the current node
-                    previous.right = null;
+                    newParentOfCurrent.right = null;
 
                     // add current node
                     result.add(current.val);
