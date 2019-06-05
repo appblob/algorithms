@@ -7,8 +7,12 @@ import java.util.List;
 public class MergeMultipleSortedArraysWithDuplicates {
 
     /*
-    * Technique : 2 pointers, one each on each array.
+    * There are 2 sorted arrays that might contain duplicates.
+    * Write a function that creates merged sorted array without duplicates.
     *
+    * Company : Tabuleau
+    *
+    * Technique : Pointers Technique, one pointer for each array.
     *
     * */
     public static int[] merge(int[] ar1, int[] ar2) {
