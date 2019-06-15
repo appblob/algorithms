@@ -13,8 +13,10 @@ public class TwoSum {
      *
      * Technique : Map lookup.
      *
-     * Thought : use map<nums[i], i> to store number as you iterate.
-     * Search if (target - nums[i]) is in the map
+     * Thought : Create a map to store number and it's index.
+     * Iterate the array.
+     * Search if (target - nums[i]) is in the map.
+     * Otherwise put <nums[i], i> into the map.
      *
      * Time Complexity : O(n)
      *
