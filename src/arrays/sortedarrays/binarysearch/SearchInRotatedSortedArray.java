@@ -35,25 +35,30 @@ public class SearchInRotatedSortedArray {
     }
 
     public static int search(int[] nums, int target) {
-        int left = 0;
-        int right = nums.length - 1;
+        int left = 0, right = nums.length - 1;
+
         while(left <= right) {
+
             int mid = (left + right) / 2;
+
             if(nums[mid] == target) return mid;
 
-            if(nums[mid] < nums[right]) {//[7 8 3 5 6]
+            else if(nums[mid] < nums[right]) {//[7 8 3 5 6]
+
                 if(target > nums[mid] && target <= nums[right]) left = mid + 1; //[7 8 3 5 6], 5
+
                 else right = mid - 1; //[7 8 3 5 6], 8
 
             } else if(nums[mid] > nums[right]) {//[6 7 8 3 5]
 
                 if(target < nums[mid] && target >= nums[left]) right = mid - 1; //[6 7 8 3 5], 7
+
                 else left = mid + 1; //[6 7 8 3 5], 3
 
-            }
-            else right--; // nums[mid] = nums[right] [1 2 3 3 3]
+            } else right--; // nums[mid] = nums[right] [1 2 3 3 3]
 
         }
+
         return -1;
     }
 
